@@ -1,0 +1,59 @@
+<html>
+
+    <head>
+        <script type="text/javascript" src="script.js"></script>
+        <style>
+            .button {
+                background-color: hotpink;
+                border: none;
+                border-radius:10px;
+                color: white;
+                padding: 5px 5px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 16px;
+                margin: 4px 2px;
+                cursor: pointer;
+                transition-duration: 0.1s;
+                width:100%;
+                box-shadow: 0 9px lightgrey;
+                }
+            .button span {
+                position: relative;
+                transition: 0.5s;
+            }
+            
+            .button span:after {
+                content: "↓";
+                position: absolute;
+                opacity:0;
+                top: 0;
+                right: -20px;
+                transition: 0.5s;
+            }
+            
+            .button:hover {
+                border: 1px solid #4CAF50;
+            }
+            
+            .button:hover span:after {
+                opacity: 1;
+                right:0;
+            }
+            
+            
+            .button:active{
+                box-shadow:0 5px grey;
+                transform: translateY(4px);
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class='header'><h1> click count: </h1> <h1 id="result"></h1> </div>
+    <button class="button" onclick="kluarNombor('world')">click me</button>
+        <button class="button" onclick="resetnombor('nombor')"> RESET</button>
+    </body>
+
+</html>
